@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { monserrat, mystery_quest } from "@/fonts/fonts";
 import "./globals.css";
+import "material-symbols"
+
+import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
@@ -15,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${monserrat.className} ${mystery_quest.variable}`}>{children}</body>
+      <body className={`${monserrat.className} ${mystery_quest.variable} px-4`}>
+        <Footer/>
+      </body>
     </html>
   );
 }
