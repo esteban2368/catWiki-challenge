@@ -4,6 +4,7 @@ import "./globals.css";
 import "material-symbols"
 
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 
 export const metadata: Metadata = {
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${monserrat.className} ${mystery_quest.variable} px-4`}>
+      <body className={`${monserrat.className} ${mystery_quest.variable} px-[18px]`}>
+        <Header/>
+        <main className="container">{children}</main>
         <Footer/>
       </body>
     </html>
