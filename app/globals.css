@@ -5,9 +5,11 @@
 :root {
   --color-black: 0, 0%, 0%;
   --color-white: 0, 0%, 100%;
+  --color-gray: 0, 0%, 59%;
   --color-light-coffee: 43, 11%, 88%;
   --color-coffee: 25, 73%, 17%;
   --color-dark-coffee: 25, 73%, 9%;
+  --color-orange-coffee: 26, 74%, 42%;
 
   --title1: 2.5em;
   --title2: 1.875em;
@@ -15,8 +17,19 @@
   --title4: .75em
 }
 
+.wrapContent{
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1.5rem;
+  grid-template-areas: "header header header header"
+                       "main   main   main   main"
+                       "footer footer footer footer";
+}
 .container{
+  grid-area: main;
   font-size: 16px;
+  font-weight: 500;
 }
 p{
   color: hsl(var(--color-dark-coffee));

@@ -1,30 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import HeroWiki from "@/components/HeroWiki";
 import style from "./Home.module.css"
 
 export default function Home() {
   return (
     <>
-      <section className={`${style.hero}`}>
-        <div className={`${style.hero__wrap} flex flex-col gap-4 px-7 pt-5 pb-6`}>
-          <div>
-            <h2 className={style.hero__title}>Catwiki</h2>
-            <p className={style.hero__text}>Get to know more about<br/> your cat breed</p>
-          </div>
-          <button className={`${style.hero__search} title4`}>
-            Search <span className="material-symbols-rounded s-20">search</span> 
-          </button>
-        </div>
-        <div className={style.hero__containerBg}>
-          <Image
-            alt="a cat breed"
-            src="/HeroImagelg.png"
-            fill
-            className="object-cover"
-          />
-        </div>
-      </section>
+      <HeroWiki/>
       <section className={`${style.summary} px-7 py-5`}>
         <div className="title title4">
           <span>Most Searched Breeds</span>

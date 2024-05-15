@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${monserrat.className} ${mystery_quest.variable} px-[18px]`}>
+      <body className={`${monserrat.className} ${mystery_quest.variable} wrapContent px-[18px]`}>
         <Header/>
         <main className="container">{children}</main>
         <Footer/>

@@ -2,10 +2,11 @@ import Link from "next/link"
 import Image from "next/image"
 
 import { LOGO_SIZE } from "@/constants/Header"
+import style from "./Header.module.css"
 
 const Header = ()=>{
     return(
-        <header className="pt-3">
+        <header className={`${style.container} pt-3`}>
             <Link href={"/"}>
                 <Image
                     alt="Cat wiki logo"
