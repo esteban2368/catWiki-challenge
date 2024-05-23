@@ -10,7 +10,7 @@ const Header = ()=>{
             <Link href={"/"}>
                 <Image
                     alt="Cat wiki logo"
-                    src="./catwiki_logo.svg"
+                    src="/catwiki_logo.svg"
                     width={LOGO_SIZE.mobile.width}
                     height={LOGO_SIZE.desktop.height}
                 />

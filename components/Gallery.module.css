@@ -1,0 +1,27 @@
+.wrap{
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+}
+.button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: hsla(var(--color-gray), .3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:disabled{
+    opacity: .4;
+}
+.buttonNext{
+    right: 5px;
+}
+.buttonBack{
+    left: 5px;
+}

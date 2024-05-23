@@ -1,0 +1,15 @@
+.wrap{
+    display: flex;
+    align-items: center;
+    gap: 9px
+}
+.scaleItem.stars {
+    background-color: hsl(var(--color-coffee));
+}
+.scaleItem{
+    display: inline-block;
+    width: 3.75rem;
+    height: .75rem;
+    background-color: hsl(var(--color-light-gray));
+    border-radius: 8px;
+}

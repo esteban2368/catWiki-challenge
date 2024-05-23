@@ -3,7 +3,8 @@
     position: sticky;
     border: solid 1px hsl(var(--color-black));
     background-color: hsl(var(--color-white));
-   border-radius: 3.68rem; 
+    color: hsl(var(--color-dark-coffee));
+    border-radius: 3.68rem; 
 
    display: flex;
    align-items: center;
@@ -16,7 +17,6 @@
     width: 100%;
     font-size: 1.125rem;
     line-height: 1.31rem;
-    color: hsl(var(--color-dark-coffee));
     outline: 0;
 }
 .input::placeholder{

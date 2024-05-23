@@ -4,15 +4,20 @@ import { breedsType } from "@/types/HeroWikiTypes"
 
 import style from "./ListBreebs.module.css"
 interface props {
-    items: breedsType[] | undefined
+    items: breedsType[] | undefined,
+    floating: boolean
 }
-const ListBreeds = ({items}: props) => {
+const ListBreeds = ({
+    items,
+    floating = false
+}: props) => {
     //const breeds = await getBreeds()
+    const variantClass = floating ? style["floating"] : ""
     return(
-        <div className={style.wrap}>
-            <ul className={style.list}>
+        <div className={`${style.wrap} ${variantClass}`}>
+            <ul className={`${style.list} sm:mx-3 sm:mt-3`}>
                 {items?.length === 0 &&
-                    <li className={style.list__muted}>
+                    <li className="textMuted">
                         <span className="material-symbols-rounded s-48">
                             sentiment_dissatisfied
                         </span>
@@ -22,7 +27,7 @@ const ListBreeds = ({items}: props) => {
                 {items &&
                 items.map((breed : breedsType) => (
                     <li key={breed.id} className={`${style.list__item}`}>
-                        <Link href="/breeds" className={`${style.list__itemLink} px-3 py-4`}>
+                        <Link href={`/breeds/${breed.id}`} className={`${style.list__itemLink} px-3 py-4`}>
                             {breed.name}
                         </Link>
                     </li>
