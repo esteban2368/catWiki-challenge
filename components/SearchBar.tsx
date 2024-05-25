@@ -9,7 +9,7 @@ interface SearchBarTypes {
     onFocus: () => void;
 }
 
-const SearchBar = forwardRef(({
+const SearchBar = ({
     typeBar = "mobile",
     children, 
     query,
@@ -32,6 +32,6 @@ ref: ForwardedRef<HTMLInputElement>)=>{
             <span className="material-symbols-rounded s-24">search</span>
         </div>
     )
-})
+}
 
-export default SearchBar
+export default forwardRef(SearchBar)
