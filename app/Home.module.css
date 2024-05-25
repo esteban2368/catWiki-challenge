@@ -61,6 +61,7 @@
     
 }
 .summary__galleryImage{
+    display: block;
     position: relative;
     border-radius: 12px;
     overflow: hidden;

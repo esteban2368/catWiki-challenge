@@ -31,7 +31,7 @@ export default async function Home() {
                 <div key={breedsMostSearched.id}>
                   {breedsInfo.breeds.map((breed: infoBreedType) => (
                     <div key={breed.id}>
-                      <div className={`${style.summary__galleryImage} mb-3`}>
+                      <Link href={`/breeds/${breed.id}`} className={`${style.summary__galleryImage} mb-3`}>
                         <Image
                           alt={`Picture of ${breed.name} breed`}
                           placeholder="blur"
@@ -40,7 +40,7 @@ export default async function Home() {
                           className="object-cover"
                           fill
                         />
-                      </div>
+                      </Link>
                       <span className="title title4 f-semibold">{breed.name}</span>
                     </div>
                   ))}
