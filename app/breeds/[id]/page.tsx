@@ -7,7 +7,7 @@ import Gallery from "@/components/Gallery"
 
 import { getBreeds, getBreedByID, getImageByBreed} from "@/services/wikiServices"
 import { breedsType } from "@/types/HeroWikiTypes"
-import { imageGalleryType } from "@/types/Gallery"
+import { imageBreedType } from "@/types/Page"
 import { PLACEHOLDER_IMAGE } from "@/constants/Page/MainImageBreed"
 
 import style from "./page.module.css"
@@ -117,7 +117,7 @@ const Page = async ({
                 <div className={`${style.gallery} hidden sm:block`}>
                     <Suspense fallback={<p>Loading .....</p>}>
                         {images ?
-                            images.map((image: imageGalleryType) => {
+                            images.map((image: imageBreedType) => {
                                 return <div key={image.id} className={style.gallery__wrapImage}>
                                             <Image
                                                 alt="Image Gallery"

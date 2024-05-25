@@ -2,12 +2,12 @@
 import { Suspense, useState } from "react"
 import Image from "next/image"
 import { PLACEHOLDER_IMAGE } from "@/constants/Page/MainImageBreed"
-import { imageGalleryType } from "@/types/Gallery"
+import { imageBreedType } from "@/types/Page"
 
 import style from "./Gallery.module.css"
 
 interface props{
-    images: imageGalleryType[]    
+    images: imageBreedType[]    
 }
 
 const Gallery = ({images}: props) => {

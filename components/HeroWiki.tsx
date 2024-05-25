@@ -48,7 +48,7 @@ const HeroWiki = () => {
                             height={65}
                         />    
                     </h2>
-                    <p className={style.hero__text}>Get to know more about<br/> your cat breed</p>
+                    <p className={style.hero__text}>Get to know more about<br className="sm:hidden"/> your cat breed</p>
                 </div>
                 <button className={`${style.hero__search} title4`} onClick={handleOpenModal}>
                     Search <span className="material-symbols-rounded s-20">search</span> 

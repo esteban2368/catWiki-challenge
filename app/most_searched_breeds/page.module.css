@@ -1,0 +1,21 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 3.43rem
+}
+.infoBreed{
+    display: flex;
+    flex-direction: column;
+    gap: 2.87rem;
+}
+.infoBreed__image{
+    border-radius: 24px;
+    overflow: hidden;
+    margin: auto;
+}
+
+@media (min-width:640px) {
+    .infoBreed{
+        flex-direction: row;
+    }
+}

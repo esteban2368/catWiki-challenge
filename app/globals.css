@@ -135,7 +135,9 @@ span.s-48 {
   left: 50%;
   transform: translateX(-50%);
 }
-
+.f-semibold{
+  font-weight: 600 !important
+}
 /*Breakponts screen size*/
 @media (min-width: 640px) {
   .container{
