@@ -15,7 +15,7 @@ interface props{
 }
 
 const HeroWiki = () => {
-    const [dataBreeds] = useDataBreeds("http://localhost:3000/api")
+    const [dataBreeds] = useDataBreeds(`${process.env.URL_ROUTE_CAT}`)
     const [isOpenModal, setIsOpenModal] = useState(false)
     const [query, setQuery] = useState('')
     const [focusSearch, setFocusSearch] = useState(false)
