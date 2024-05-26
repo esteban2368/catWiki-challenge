@@ -16,21 +16,13 @@ interface paramsType{
     id: string
 }
 
-export async function generateStaticParams(){
-    const breeds =  await getBreeds()
-
-    return breeds.map((breed : breedsType) => ({
-        id: breed.id
-    }))
-}
-
 const Page = async ({
     params
 } : {
     params: paramsType
 }) => {
     const { id } = params
-    const breeds = getBreedByID(id)
+    const breeds = await getBreedByID(id)
     const imagesBreed = getImageByBreed(id)
 
     const [breedData, images] = await Promise.all([breeds, imagesBreed])
