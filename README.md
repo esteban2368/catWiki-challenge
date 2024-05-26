@@ -9,7 +9,7 @@ This is a solution to the [CatWiki page](https://legacy.devchallenges.io/challen
 ### Links
 
 - Solution URL: [Code solution](https://github.com/esteban2368/wiki-cat-challenge)
-- Live Site URL: [Live site](https://frontenmentor-url-shortening-api-landing-page.vercel.app/)
+- Live Site URL: [Live site](https://wiki-cat-challenge.vercel.app/)
 
 ### Built with
 
