@@ -28,7 +28,7 @@ const Modal = ({isOpenModal, setIsOpenModal, dataToShow = undefined} : props ) =
                 </button>
                 <div className={style.content}>
                     <div className="flex flex-col gap-4">
-                        <SearchBar typeBar="mobile" query={query} onChange={handleChangeInput} >
+                        <SearchBar typeBar="mobile" query={query} onFocus={() => false} onChange={handleChangeInput} >
                             Enter
                         </SearchBar>
                         <Suspense fallback={
@@ -39,7 +39,7 @@ const Modal = ({isOpenModal, setIsOpenModal, dataToShow = undefined} : props ) =
                                 <p>Loading...</p>
                             </div>
                         }>
-                            <ListBreeds items={items}/>
+                            <ListBreeds floating={false} items={items}/>
                         </Suspense>
                     </div>
                 </div>
