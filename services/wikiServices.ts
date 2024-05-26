@@ -8,7 +8,7 @@ headers.append('x-api-key', `${process.env.API_CAT_KEY}`)
 
 export const getBreeds = async() => {
     const response = await fetch(
-        `${process.env.API_CAT_URL}/breeds`,
+        `${process.env.API_PORT}${process.env.API_CAT_URL}/breeds`,
         {
             headers: headers
         })
@@ -19,7 +19,7 @@ export const getBreeds = async() => {
 
 export const getBreedByID = async (id: string) => {
     const response = await fetch(
-        `${process.env.API_CAT_URL}/breeds/${id}`,
+        `${process.env.API_PORT}${process.env.API_CAT_URL}/breeds/${id}`,
         {
             headers: headers
         }
@@ -30,7 +30,7 @@ export const getBreedByID = async (id: string) => {
 export const getMainImageBreed = async (id: string) => {
     try {
         const response = await fetch(
-            `${process.env.API_CAT_URL}/images/${id}`,
+            `${process.env.API_PORT}${process.env.API_CAT_URL}/images/${id}`,
             {
                 headers: headers
             }
@@ -49,7 +49,7 @@ export const getMainImageBreed = async (id: string) => {
 
 export const getImageByBreed = async (id: string) => {
     const response = await fetch(
-        `${process.env.API_CAT_URL}/images/search?size=${PARAMS.size}&has_breeds=${PARAMS.has_breeds}&limit=${PARAMS.limit}&include_breeds=${PARAMS.include_breeds}&breed_ids=${id}`,
+        `${process.env.API_PORT}${process.env.API_CAT_URL}/images/search?size=${PARAMS.size}&has_breeds=${PARAMS.has_breeds}&limit=${PARAMS.limit}&include_breeds=${PARAMS.include_breeds}&breed_ids=${id}`,
         {
             headers: headers
         }
@@ -60,7 +60,7 @@ export const getImageByBreed = async (id: string) => {
 
 export const getImageRamdom = async () => {
     const response = await fetch(
-        `${process.env.API_CAT_URL}/images/search?size=${PARAMS_RAMDOM.size}&has_breeds=${PARAMS_RAMDOM.has_breeds}&limit=${PARAMS_RAMDOM.limit}&include_breeds=${PARAMS_RAMDOM.include_breeds}`,
+        `${process.env.API_PORT}${process.env.API_CAT_URL}/images/search?size=${PARAMS_RAMDOM.size}&has_breeds=${PARAMS_RAMDOM.has_breeds}&limit=${PARAMS_RAMDOM.limit}&include_breeds=${PARAMS_RAMDOM.include_breeds}`,
         {
             headers: headers
         }
